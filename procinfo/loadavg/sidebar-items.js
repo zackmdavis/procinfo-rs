@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["loadavg","Returns the system load average."]],"struct":[["LoadAvg","System load and task statistics."]]});

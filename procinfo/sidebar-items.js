@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["loadavg","Returns the system load average."]],"mod":[["pid","Process-specific information from `/proc/[pid]/`."]],"struct":[["LoadAvg","System load and task statistics."]]});

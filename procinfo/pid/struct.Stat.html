@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Stat` struct in crate `procinfo`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Stat">
+
+    <title>procinfo::pid::Stat - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>procinfo</a>::<wbr><a href='index.html'>pid</a></p><script>window.sidebarCurrent = {name: 'Stat', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>procinfo</a>::<wbr><a href='index.html'>pid</a>::<wbr><a class='struct' href=''>Stat</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-393' class='srclink' href='../../src/procinfo/pid/stat.rs.html#25-158' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Stat {
+    pub pid: <a class='type' href='../../libc/unix/type.pid_t.html' title='libc::unix::pid_t'>pid_t</a>,
+    pub command: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub state: <a class='enum' href='../../procinfo/pid/enum.State.html' title='procinfo::pid::State'>State</a>,
+    pub ppid: <a class='type' href='../../libc/unix/type.pid_t.html' title='libc::unix::pid_t'>pid_t</a>,
+    pub pgrp: <a class='type' href='../../libc/unix/type.pid_t.html' title='libc::unix::pid_t'>pid_t</a>,
+    pub session: <a class='type' href='../../libc/unix/type.pid_t.html' title='libc::unix::pid_t'>pid_t</a>,
+    pub tty_nr: <a class='type' href='../../libc/unix/type.pid_t.html' title='libc::unix::pid_t'>pid_t</a>,
+    pub tty_pgrp: <a class='type' href='../../libc/unix/type.pid_t.html' title='libc::unix::pid_t'>pid_t</a>,
+    pub flags: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub minflt: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub cminflt: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub majflt: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub cmajflt: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub utime: <a class='type' href='../../libc/unix/notbsd/linux/other/b64/type.clock_t.html' title='libc::unix::notbsd::linux::other::b64::clock_t'>clock_t</a>,
+    pub stime: <a class='type' href='../../libc/unix/notbsd/linux/other/b64/type.clock_t.html' title='libc::unix::notbsd::linux::other::b64::clock_t'>clock_t</a>,
+    pub cutime: <a class='type' href='../../libc/unix/notbsd/linux/other/b64/type.clock_t.html' title='libc::unix::notbsd::linux::other::b64::clock_t'>clock_t</a>,
+    pub cstime: <a class='type' href='../../libc/unix/notbsd/linux/other/b64/type.clock_t.html' title='libc::unix::notbsd::linux::other::b64::clock_t'>clock_t</a>,
+    pub priority: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub nice: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub num_threads: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub start_time: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub vsize: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub rss: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub rsslim: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub start_code: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub end_code: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub startstack: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub kstkeep: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub kstkeip: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub signal: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub blocked: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub sigignore: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub sigcatch: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub wchan: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub exit_signal: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub processor: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub rt_priority: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub policy: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub delayacct_blkio_ticks: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub guest_time: <a class='type' href='../../libc/unix/notbsd/linux/other/b64/type.clock_t.html' title='libc::unix::notbsd::linux::other::b64::clock_t'>clock_t</a>,
+    pub cguest_time: <a class='type' href='../../libc/unix/notbsd/linux/other/b64/type.clock_t.html' title='libc::unix::notbsd::linux::other::b64::clock_t'>clock_t</a>,
+    pub start_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub end_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub start_brk: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub arg_start: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub arg_end: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub env_start: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub env_end: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub exit_code: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+}</pre><div class='docblock'><p>Process status information.</p>
+
+<p>See <code>man 5 proc</code> and <code>Linux/fs/proc/array.c</code>.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                                  <td id='structfield.pid'><code>pid</code></td><td><div class='docblock'><p>Process ID (i.e., Thread Group ID).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.command'><code>command</code></td><td><div class='docblock'><p>Filename of the executable.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.state'><code>state</code></td><td><div class='docblock'><p>Current state of the process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.ppid'><code>ppid</code></td><td><div class='docblock'><p>Process ID of parent process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.pgrp'><code>pgrp</code></td><td><div class='docblock'><p>Process group ID of the process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.session'><code>session</code></td><td><div class='docblock'><p>Session ID of the process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.tty_nr'><code>tty_nr</code></td><td><div class='docblock'><p>The controlling terminal of the process. (The minor device number is contained in the
+combination of bits 31 to 20 and 7 to 0; the major device number is in bits 15 to 8.)</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.tty_pgrp'><code>tty_pgrp</code></td><td><div class='docblock'><p>Process group ID of the controlling terminal of the process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.flags'><code>flags</code></td><td><div class='docblock'><p>The kernel flags word of the process. For bit meanings, see the <code>PF_*</code> defines in the Linux
+kernel source file <code>include/linux/sched.h</code>. Details depend on the kernel version.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.minflt'><code>minflt</code></td><td><div class='docblock'><p>The number of minor faults the process has made which have not required loading a memory
+page from disk.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cminflt'><code>cminflt</code></td><td><div class='docblock'><p>The number of minor faults that the process&#39;s waited-for children have made.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.majflt'><code>majflt</code></td><td><div class='docblock'><p>The number of major faults the process has made which have required loading a memory page
+from disk.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cmajflt'><code>cmajflt</code></td><td><div class='docblock'><p>The number of major faults that the process&#39;s waited-for children have made.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.utime'><code>utime</code></td><td><div class='docblock'><p>Amount of time that this process has been scheduled in user mode, measured in clock ticks
+(divide by <code>sysconf(_SC_CLK_TCK)</code>). This includes guest time, <code>guest_time</code> (time spent
+running a virtual CPU, see below), so that applications that are not aware of the guest
+time field do not lose that time from their calculations.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.stime'><code>stime</code></td><td><div class='docblock'><p>Amount of time that this process has been scheduled in kernel mode, measured in clock ticks
+(divide by <code>sysconf(_SC_CLK_TCK)</code>).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cutime'><code>cutime</code></td><td><div class='docblock'><p>Amount of time that this process&#39;s waited-for children have been scheduled in user mode,
+measured in clock ticks (divide by <code>sysconf(_SC_CLK_TCK)</code>). (See also <code>times(2)</code>.)  This
+includes guest time, <code>cguest_time</code> (time spent running a virtual CPU, see below).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cstime'><code>cstime</code></td><td><div class='docblock'><p>Amount of time that this process&#39;s waited-for children have been scheduled in kernel mode,
+measured in clock ticks (divide by <code>sysconf(_SC_CLK_TCK)</code>).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.priority'><code>priority</code></td><td><div class='docblock'><p>For processes running a real-time scheduling policy (policy below; see
+<code>sched_setscheduler(2)</code>), this is the negated scheduling priority, minus one; that is, a
+number in the range -2 to -100, corresponding to real-time priorities 1 to 99. For
+processes running under a non-real-time scheduling policy, this is the raw nice value
+(<code>setpriority(2)</code>) as represented in the kernel. The kernel stores nice values as numbers
+in the range 0 (high) to 39 (low), corresponding to the user-visible nice range of -20 to
+19.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.nice'><code>nice</code></td><td><div class='docblock'><p>The nice value (see <code>setpriority(2)</code>), a value in the range 19 (low priority) to -20 (high
+priority).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.num_threads'><code>num_threads</code></td><td><div class='docblock'><p>Number of threads in this process (since Linux 2.6).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.start_time'><code>start_time</code></td><td><div class='docblock'><p>The time the process started after system boot, expressed in clock ticks (divide by
+<code>sysconf(_SC_CLK_TCK)</code>).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.vsize'><code>vsize</code></td><td><div class='docblock'><p>Virtual memory size in bytes.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.rss'><code>rss</code></td><td><div class='docblock'><p>Resident Set Size: number of pages the process has in real memory. This is just the pages
+which count toward text, data, or stack space. This does not include pages which have not
+been demand-loaded in, or which are swapped out.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.rsslim'><code>rsslim</code></td><td><div class='docblock'><p>Current soft limit in bytes on the rss of the process; see the description of <code>RLIMIT_RSS</code>
+in <code>getrlimit(2)</code>.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.start_code'><code>start_code</code></td><td><div class='docblock'><p>The address above which program text can run.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.end_code'><code>end_code</code></td><td><div class='docblock'><p>The address below which program text can run.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.startstack'><code>startstack</code></td><td><div class='docblock'><p>The address of the start (i.e., bottom) of the stack.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.kstkeep'><code>kstkeep</code></td><td><div class='docblock'><p>The current value of ESP (stack pointer), as found in the kernel stack page for the process.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.kstkeip'><code>kstkeip</code></td><td><div class='docblock'><p>The current EIP (instruction pointer).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.signal'><code>signal</code></td><td><div class='docblock'><p>The bitmap of pending signals. Obsolete, because it does not provide information on
+real-time signals; use <code>/proc/[pid]/status</code> instead.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.blocked'><code>blocked</code></td><td><div class='docblock'><p>The bitmap of blocked signals. Obsolete, because it does not provide information on
+real-time signals; use <code>/proc/[pid]/status</code> instead.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sigignore'><code>sigignore</code></td><td><div class='docblock'><p>The bitmap of ignored signals. Obsolete, because it does not provide information on
+real-time signals; use <code>/proc/[pid]/status</code> instead.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.sigcatch'><code>sigcatch</code></td><td><div class='docblock'><p>The bitmap of caught signals. Obsolete, because it does not provide information on
+real-time signals; use /proc/[pid]/status instead.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.wchan'><code>wchan</code></td><td><div class='docblock'><p>This is the &quot;channel&quot; in which the process is waiting. It is the address of a location in
+the kernel where the process is sleeping. The corresponding symbolic name can be found in
+<code>/proc/[pid]/wchan</code>.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.exit_signal'><code>exit_signal</code></td><td><div class='docblock'><p>Signal to be sent to parent when we die.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.processor'><code>processor</code></td><td><div class='docblock'><p>CPU number last executed on.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.rt_priority'><code>rt_priority</code></td><td><div class='docblock'><p>Real-time scheduling priority, a number in the range 1 to 99 for processes scheduled under
+a real-time policy, or 0, for non-real-time processes (see <code>sched_setscheduler(2)</code>).</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.policy'><code>policy</code></td><td><div class='docblock'><p>Scheduling policy (see <code>sched_setscheduler(2)</code>). Decode using the <code>SCHED_*</code> constants in
+<code>linux/sched.h</code>.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.delayacct_blkio_ticks'><code>delayacct_blkio_ticks</code></td><td><div class='docblock'><p>Aggregated block I/O delays, measured in clock ticks (centiseconds). Since Linux 2.6.18.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.guest_time'><code>guest_time</code></td><td><div class='docblock'><p>Guest time of the process (time spent running a virtual CPU for a guest operating system),
+measured in clock ticks (divide by <code>sysconf(_SC_CLK_TCK)</code>). Since Linux 2.6.24.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.cguest_time'><code>cguest_time</code></td><td><div class='docblock'><p>Guest time of the process&#39;s children, measured in clock ticks (divide by
+<code>sysconf(_SC_CLK_TCK)</code>). Since linux 2.6.24.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.start_data'><code>start_data</code></td><td><div class='docblock'><p>Address above which program initialized and uninitialized (BSS) data are placed. Since
+Linux 3.3.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.end_data'><code>end_data</code></td><td><div class='docblock'><p>Address below which program initialized and uninitialized (BSS) data are placed. Since
+Linux 3.3.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.start_brk'><code>start_brk</code></td><td><div class='docblock'><p>Address above which program heap can be expanded with <code>brk(2)</code>. Since Linux 3.3.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.arg_start'><code>arg_start</code></td><td><div class='docblock'><p>Address above which program command-line arguments (argv) are placed. Since Linux 3.5.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.arg_end'><code>arg_end</code></td><td><div class='docblock'><p>Address below program command-line arguments (argv) are placed. Since Linux 3.5.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.env_start'><code>env_start</code></td><td><div class='docblock'><p>Address above which program environment is placed. Since Linux 3.5.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.env_end'><code>env_end</code></td><td><div class='docblock'><p>Address below which program environment is placed. Since Linux 3.5.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.exit_code'><code>exit_code</code></td><td><div class='docblock'><p>The thread&#39;s exit status in the form reported by <code>waitpid(2)</code>. Since Linux 3.5.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a></code></h3><div class='impl-items'><h4 id='method.hash' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash' class='fnname'>hash</a>&lt;__H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></h4>
+<h4 id='method.hash_slice' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../procinfo/pid/struct.Stat.html' title='procinfo::pid::Stat'>Stat</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "procinfo";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
